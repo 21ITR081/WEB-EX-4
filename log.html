@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="form1.png">
+</head>
+<body>
+    <body background ="pexels-pixabay-147411.jpg"style="background-repeat:no-repeat;background-size:100% 100%">
+    <div class="container">
+        <div class="head">
+            <h2>Create Account</h2>
+        </div>
+        <form action="http://localhost:2800" class="form" id="form" method="get">
+            <div class="form-control">
+                <label>UserID</label>
+                <input type="text"  placeholder="UserID" id="UserID" name="User">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Occured</small>
+            </div>
+            <div class="form-control">
+                <label>Username</label>
+                <input type="text"  placeholder="Username" id="Username" pattern="^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$" name="Usernamee">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Occured</small>
+            </div>
+            <div class="form-control">
+                <label>Email</label>
+                <input type="email"  placeholder="ff@gmail.com" id="email" name="Email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Occured</small>
+            </div> 
+            <div class="form-control">
+                <label>Password</label>
+                <input type="password"  placeholder="Password" id="Password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" name="pass">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Occured</small>
+            </div>
+            <div class="form-control">
+                <label> Confirm Password</label>
+                <input type="password"  placeholder="Confirm Password" id="Password2" name="pass1">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Occured</small>
+            </div>
+            <div class="form-control">
+                <label>Phone No</label>
+                <input type="tel"  placeholder="Phone" id="Phone" maxlength="10" pattern="^\d{10}" name="phone">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Occured</small>
+            </div>
+                <input type="submit" name="login" value="Login" class="submit">
+        </form>
+        
+    </div>
+
+    <script>
+        const form = document.getElementById("form");
+        const UserID=document.getElementById("UserID");
+        const Username = document.getElementById("Username");
+        const email= document.getElementById("email");
+        const password= document.getElementById("Password");
+        const Password2= document.getElementById("Password2");
+        const Phone=document.getElementById("Phone");
+
+        form.addEventListener('submit',e => {
+            e.preventDefault();
+            checkInput();
+        });
+
+        function checkInput()
+        {
+            const UserIDValue=UserID.value.trim();
+            const UsernameValue =Username.value.trim();
+            const emailValue =email.value.trim();
+            const passwordValue=password.value.trim();
+            const Password2Value =Password2.value.trim();
+            const PhoneValue=Phone.value.trim();
+
+
+            if(UserIDValue === ''){
+                setError(UserID,'Username Cannot be Blank');
+            }
+            
+            else{
+                setSuccess(UserID);
+
+            }
+
+        
+            if(UsernameValue === ''){
+                setError(Username,'Username Cannot be Blank');
+            }
+            
+            else{
+                setSuccess(Username);
+            }
+
+            if(emailValue === ''){
+                setError(email,'Email cannot Be Blank');
+            }
+            else if(!isEmail(emailValue))
+            {
+                setError(email,'Not a Valid Email');
+            }
+            else{
+                setSuccess(email);
+            }
+
+
+            if(passwordValue === ''){
+                setError(password,'Password Cannot be Blank');
+            }
+            else{
+                setSuccess(password);
+            }
+
+            if(Password2Value === ''){
+                setError(Password2,'Password Cannot be Blank');
+            }
+
+            else if(passwordValue  !==Password2Value){
+                setError(Password2,'Password Does Not Match');
+            }
+            else{
+                setSuccess(Password2);
+            }
+
+            if(PhoneValue === ''){
+                setError(Phone,'PhoneNumber Cannot be Blank');
+            }
+            
+            else{
+                setSuccess(Phone);
+            }
+
+            
+        };
+            function setError(input,message){
+                const formControl = input.parentElement;
+                const small = formControl.querySelector('small');
+                formControl.className ='form-control error';
+                small.innerText = message;
+            }
+             function setSuccess(input){
+                const formControl =input.parentElement;
+                formControl.className = 'form-control success';
+             }
+
+            function isEmail(email)
+            {
+            return /^([\w\.\-]+)@([\w\-]+)((\.(\w){2,9})+)$/.test(email);
+            } 
+            
+            
+            
+
+    </script>
+    
+</body>
+</html>

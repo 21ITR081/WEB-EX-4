@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cars</title>
+    <link rel="icon" href="track.jpg">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    
+    <style>
+      .banner-image {
+        background-image: url('cars.png');
+        background-size: cover;
+      }
+      .blink {
+        animation: blinker 0.6s linear infinite;
+        font-size: 20px;
+        background-color: chartreuse;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+    }
+    p{
+      font-size:20px;
+    }
+  
+    </style>
+  </head>
+  <body >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Navbar  -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+      <div class="container">
+        <a class="navbar-brand" href="#">Race Zone</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mx-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link text-white" href="form.html">Forms</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Banner Image  -->
+    <div
+      class="banner-image w-80 vh-100 d-flex justify-content-center align-items-center">      
+        <marquee direction="right">
+          <h1 class="text-white" style="font-family: 'Times New Roman', Times, serif;"><p><span class="blink" style="color:red">New</span> The Registeration is Open Now</p></h1></marquee><br><br>
+    </div>
+    <!-- Main Content Area -->
+    <div class="container col-lg-6 col-md-6 my-5 d-grid gap-5">
+      <div class="p-4 border" style="background-color: blanchedalmond;"><h1 style="color: brown;font-family: 'Times New Roman', Times, serif;font-style: italic;">Ford Mustang</h1>
+        <p style="font-family: 'Times New Roman', Times, serif;color: cadetblue;">
+          <center><a href="https://www.ford.com/cars/mustang/"><img src="mus.jpg" width="340" height="400"></center></a><br>
+          <center><video width="340" height="400" controls>
+            <source src="New Ford Mustang Videos EN 4K ULTRA HD.mp4" type="video/mp4">
+           </video></center>
+          <input type="file" accept="file/*"><br><br>
+          <h2 style="font-style: italic;font-family:'Times New Roman', Times, serif;">Deatils:</h2>
+          The Mustang is one vehicle that has really caught the attention of most buyers who want a sporty car with a piece of history, yet not wanting to spend a lot of money. The Mustang is powered by a 5.0 liter V8 that produces 396 Bhp and 515 Nm.
+        </p>
+      </div>
+      <div class="p-5 border" style="background-color: blanchedalmond;"><h1 style="color: brown; font-family: 'Times New Roman', Times, serif;font-style: italic;">BMW</h1>
+        <p style="font-family:'Times New Roman', Times, serif;color: cadetblue;">
+          <center><a href="https://www.bmw.in/en/index.html"><img src="bmw.jpg" width="340" height="400"></a><br>
+          <video width="340" height="400" controls>
+            <source src="BMW M8 GTE_ “The most determined race car we have ever built.” – BMW Motorsport..mp4" type="video/mp4">
+          </video></center>
+          <input type="file" accept="file/*"><br><br>
+          <h2 style="font-style: italic;font-family:'Times New Roman', Times, serif;">Deatils:</h2>
+          It originated in 1916 as Bayerische Flugzeug-Werke, a builder of aircraft engines, but assumed the name Bayerische Motoren Werke in July 1917 and began producing motorcycles in the 1920s. BMW entered the automobile business in 1928. The company’s R32 motorcycle set a world speed record that was not broken until 1937.
+        </p>
+      </div>
+      <div class="p-5 border" style="background-color: blanchedalmond;"><h1 style="color: brown; font-family: 'Times New Roman', Times, serif;font-style: italic;">Supra</h1>
+        <p style="font-family:'Times New Roman', Times, serif;color: cadetblue;">
+          <center><a href="https://www.topgear.com/car-news/retro/eight-reasons-why-old-toyota-supra-was-so-cool"><img src="supra.jpg" width="340" height="400"></a><br>
+          <video width="340" height="400" controls>
+          <source src="Supra DRAG RACE_ 3.0 v 2.0 v Mk4!.mp4" type="video/mp4">
+          </video></center>
+          <input type="file" accept="file/*"><br><br>
+          <h2 style="font-style: italic;font-family:'Times New Roman', Times, serif;">Deatils:</h2>
+          The legendary Mk4 Supra was propelled to fame by the immortal 2JZ engine. The Mk4 Supra's immortality is due to the legendary 2JZ engine. This engine was over-engineered to the point where it could produce over 1000 horsepower without requiring any internal modifications.        </p>
+      </div>
+    </div>
+        <marquee direction="right" scrollamount="6">     
+          <img src="race1.jpg" width="200" height="150">
+          <img src="race2.jpg"width="210" height="150">
+          <img src="race3.jpg"width="210" height="150">
+          <img src="race4.jpg"width="210" height="150">
+        </marquee><br>
+       </center>
+       <center>
+       <footer>
+       <div class="col-md-4">
+        <p>For futher Info Contact</p>
+          <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://www.facebook.com/"><img src="./facebook.png" width="25px"></a></li>
+          <li class="list-inline-item"><a href="https://twitter.com/login?lang=en"><img src="./twitter.png" width="25px"></a></li>
+          <li class="list-inline-item"><a href="https://www.instagram.com/"><img src="./instagram.png" width="25px"></a></li>
+          <li class="list-inline-item"><a href="https://mail.google.com/mail/"><img src="./gmail.png" width="25px"></a></li>
+          <li class="list-inline-item"><a href="https://web.telegram.org/"><img src="./telegram.png" width="25px"></a></li>
+        </ul>
+        </div>
+        </footer>
+       </center>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript">
+        var nav = document.querySelector('nav');
+        window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add('bg-dark', 'shadow');
+        } else {
+          nav.classList.remove('bg-dark', 'shadow');
+        }
+      });
+    </script>
+  </body>
+</html>
